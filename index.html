@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía Fiscal Express</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Guía Fiscal Express</h1>
+
+    <div class="barra">
+        <div id="progreso"></div>
+    </div>
+</header>
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Esta guía te ayudará a entender los pasos para formalizar tu actividad fiscal.</p>
+        <button onclick="iniciarGuia()">Comenzar guía</button>
+    </section>
+
+    <!-- MODULO 1 -->
+    <section id="modulo1" class="oculto">
+        <h2>🟢 Paso 1: Solicita tu cita en línea</h2>
+
+        <div class="checklist">
+
+            <label>
+                <input type="checkbox" onchange="verificarModulo1()">
+                Entrar al portal de citas del SAT y seleccionar "registrar cita"
+            </label>
+
+            <label>
+                <input type="checkbox" onchange="verificarModulo1()">
+                Seleccionar trámite: Inscripción al padrón
+            </label>
+
+            <label>
+                <input type="checkbox" onchange="verificarModulo1()">
+                Elegir tipo: Persona Física
+            </label>
+
+            <label>
+                <input type="checkbox" onchange="verificarModulo1()">
+                Capturar datos personales
+            </label>
+
+
+<label>
+    <input type="checkbox" onchange="verificarModulo1()">
+    Seleccionar inscripción al RFC personas físicas, tu estado y módulo más cercano
+</label>
+
+<label>
+    <input type="checkbox" onchange="verificarModulo1()">
+    Elegir fecha y hora
+</label>
+
+<label>
+    <input type="checkbox" onchange="verificarModulo1()">
+    Confirmar cita y guardar comprobante
+</label>
+
+
+        </div>
+
+        <br>
+
+        <button id="btnModulo1" disabled onclick="irModulo2()">
+            Siguiente →
+        </button>
+    </section>
+
+   <section id="modulo2" class="oculto">
+
+    <h2>🟢 Paso 2: Acude a tu cita en el SAT</h2>
+
+    <div class="checklist">
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo2()">
+            Llevar identificación oficial (INE o pasaporte)
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo2()">
+            Llevar comprobante de domicilio
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo2()">
+            Llevar CURP impresa
+        </label>
+<label>
+    <input type="checkbox" onchange="verificarModulo2()">
+    Llevar acuse de cita impreso
+</label>
+
+<label>
+    <input type="checkbox" onchange="verificarModulo2()">
+    Llevar USB
+</label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo2()">
+            Llegar al menos 10 minutos antes
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo2()">
+            Guardar acuse de inscripción y e.firma
+        </label>
+
+    </div>
+
+    <br>
+
+    <button id="btnModulo2" disabled onclick="irModulo3()">
+        Siguiente →
+    </button>
+
+</section>
+<section id="modulo3" class="oculto">
+
+    <h2>🟢 Paso 3: Da de alta tu actividad económica</h2>
+
+    <div class="checklist">
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo3()">
+            Ingresar al portal del SAT en el apartado de "RFC, personas" 
+        </label>
+<label>
+    <input type="checkbox" onchange="verificarModulo3()">
+    Seleccionar “Actualiza tu actividad económica y obligaciones”
+</label>
+
+<label>
+    <input type="checkbox" onchange="verificarModulo3()">
+    Seleccionar "Aviso de actualizacion de obligaciones” e Ingresar con tu e.firma y posterior la fecha de movimiento
+</label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo3()">
+            Ubicar el Régimen Simplificado de Confianza y seleccionar realizas actividades empresariales
+
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo3()">
+            Registrar tu actividad económica principal y posterior selecciona la opcion "por cuenta propia"
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo3()">
+            Confirmar si tendrás empleados o si no tendras
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo3()">
+            Guardar y confirmar el trámite
+        </label>
+
+    </div>
+
+    <br>
+
+    <button id="btnModulo3" disabled onclick="irModulo4()">
+        Siguiente →
+    </button>
+
+</section>
+<section id="modulo4" class="oculto">
+
+    <h2>🟢 Paso 4: Obtén tu Constancia de Situación Fiscal</h2>
+
+    <div class="checklist">
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo4()">
+            Ingresar al portal del SAT con tu e.firma en el búho y seleccionar Constancia de Situación Fiscal
+
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo4()">
+            Buscar la opción “Constancia de Situación Fiscal”
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo4()">
+            Generar el documento en PDF
+        </label>
+
+        <label>
+            <input type="checkbox" onchange="verificarModulo4()">
+            Descargar y guardar el archivo
+        </label>
+
+    </div>
+
+    <br>
+
+    <button id="btnModulo4" disabled onclick="irRecomendacion()">
+        Siguiente →
+    </button>
+
+</section>
+<section id="recomendacion" class="oculto">
+
+    <h2>🟠 ¿Debo usar el sistema del SAT o contratar un contador?</h2>
+
+    <div class="test">
+
+        <p>1. ¿Facturas con frecuencia?</p>
+        <select id="p1">
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <p>2. ¿Le facturas principalmente a empresas?</p>
+        <select id="p2">
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <p>3. ¿Tienes tiempo para aprender el sistema del SAT?</p>
+        <select id="p3">
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <p>4. ¿Te sientes cómodo usando computadora?</p>
+        <select id="p4">
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="evaluarRecomendacion()">
+            Ver recomendación
+        </button>
+
+        <div id="resultadoRecomendacion" style="margin-top:20px;"></div>
+
+        <br>
+
+        <button id="btnISR" class="oculto" onclick="irISR()">
+            Siguiente →
+        </button>
+
+    </div>
+
+</section>
+<section id="isr" class="oculto">
+
+    <h2>🔴 Declaración Mensual de Impuestos</h2>
+
+    <h3>1️⃣ Cálculo de ISR (RESICO)</h3>
+
+    <label>Ingresa tus ingresos del mes:</label>
+    <input type="number" id="ingresosMes" placeholder="Ej: 12000">
+
+    <button type="button" onclick="calcularISR()">
+        Calcular ISR
+    </button>
+
+    <p id="resultadoISR"></p>
+
+    <hr>
+
+    <h3>2️⃣ Cálculo de IVA</h3>
+
+    <label>Ventas del mes:</label>
+    <input type="number" id="ventasIVA" placeholder="Ej: 10000">
+
+    <label>Compras del mes:</label>
+    <input type="number" id="comprasIVA" placeholder="Ej: 3000">
+
+    <button type="button" onclick="calcularIVA()">
+        Calcular IVA
+    </button>
+
+    <p id="resultadoIVA"></p>
+
+    <hr>
+
+    <p><strong>Recuerda:</strong> Debes declarar antes del día 17 de cada mes.</p>
+
+    <br>
+
+    <button id="btnFinal" class="oculto" onclick="irFinal()">
+        Siguiente →
+    </button>
+
+</section>
+
+<section id="final" class="oculto">
+
+    <h2>⭐ ¿Cómo fue tu experiencia?</h2>
+
+    <p>Califica esta guía fiscal:</p>
+
+    <div class="estrellas">
+        <span onclick="calificar(1)">★</span>
+        <span onclick="calificar(2)">★</span>
+        <span onclick="calificar(3)">★</span>
+        <span onclick="calificar(4)">★</span>
+        <span onclick="calificar(5)">★</span>
+    </div>
+
+    <p id="mensajeExperiencia" style="margin-top:15px;"></p>
+
+    <br>
+
+    <button onclick="reiniciarGuia()" id="btnReiniciar" class="oculto" style="background-color:#ef4444;">
+        Reiniciar guía
+    </button>
+
+</section>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+    /* CIELO */
+    background: linear-gradient(to bottom, #87ceeb 0%, #bde9ff 60%, #f4f6f9 100%);
+}
+
+
+header {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.barra {
+    width: 100%;
+    height: 8px;
+    background: #334155;
+    margin-top: 10px;
+}
+
+#progreso {
+    height: 100%;
+    width: 0%;
+    background: #22c55e;
+    transition: width 0.3s ease;
+}
+
+main {
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.checklist label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.oculto {
+    display: none;
+}
+.estrellas {
+    font-size: 40px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.estrellas span {
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.estrellas span.activa {
+    color: gold;
+}
+/* NUBES */
+
+body::before {
+    content: "";
+    position: fixed;
+     top: 150px;
+    left: 10%;
+    width: 200px;
+    height: 80px;
+    background: white;
+    border-radius: 50px;
+    box-shadow:
+        60px 0 white,
+        120px 0 white,
+        30px -30px white,
+        90px -20px white;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 220px;
+    right: 15%;
+    width: 180px;
+    height: 70px;
+    background: white;
+    border-radius: 50px;
+    box-shadow:
+        50px 0 white,
+        100px 0 white,
+        25px -25px white,
+        75px -15px white;
+    opacity: 0.7;
+    z-index: -1;
+}
+/* CÉSPED */
+
+main::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #15803d, #22c55e);
+    z-index: -1;
+}
