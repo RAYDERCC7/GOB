@@ -222,7 +222,8 @@ function reiniciarGuia() {
         select.selectedIndex = 0;
     });
 
-    document.getElementById("resultadoISR").innerHTML = "";
+    document.getElementById("resultadoISR1").innerHTML = "";
+    document.getElementById("resultadoISR2").innerHTML = "";
     document.getElementById("resultadoIVA").innerHTML = "";
     document.getElementById("resultadoRecomendacion").innerHTML = "";
     document.getElementById("mensajeExperiencia").innerText = "";
